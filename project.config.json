@@ -65,49 +65,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "go",
-					"pathName": "pages/go-mid/Unauthorized/unauthorized",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/team/create/create",
-					"pathName": "pages/team/create/create",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/team/detail/real-time/real-time",
-					"pathName": "pages/team/detail/real-time/real-time",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "GO页面报警记录",
-					"pathName": "pages/go-mid/alarm-log/log",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "报警地图",
-					"pathName": "pages/go-mid/alarm-map/map",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "高德地图",
-					"pathName": "pages/go-mid/gd-map/gd-map",
-					"scene": null
-				}
-			]
+			"list": []
 		}
 	}
 }
