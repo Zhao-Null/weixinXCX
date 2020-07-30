@@ -1,7 +1,7 @@
 // app.ts
 App<IAppOption>({
     globalData: {
-        address: "https://help.globletech.net/",
+        address: "",
         token: "",
         phone: 123,
         authorization: true,
