@@ -41,7 +41,7 @@
 	},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"appid": "wx44d5da0f0064db15",
+	"appid": "",
 	"condition": {
 		"search": {
 			"current": -1,
