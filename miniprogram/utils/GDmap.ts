@@ -1,7 +1,6 @@
 import {
     Points,
     PathRoute,
-    PathRouteVoid,
     TransitRouteVoid,
     AMap,
     Regeo,
@@ -10,7 +9,7 @@ import {
     WalkingRouteVoid,
     RidingRouteVoid,
     Instruction,
-} from "./interface/GO-interface";
+} from "./interface/my-interface";
 import { foundSml, toZhDigit } from "./util";
 
 var AMapp: AMap = require("../utils/amap-wx.js");
