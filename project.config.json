@@ -1,0 +1,113 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"miniprogramRoot": "miniprogram/",
+	"compileType": "miniprogram",
+	"libVersion": "2.8.2",
+	"projectname": "study-team-%E5%A4%A7%E8%90%A8%E8%BE%BE",
+	"scripts": {
+		"beforeCompile": "npm run tsc",
+		"beforePreview": "npm run tsc",
+		"beforeUpload": "npm run tsc"
+	},
+	"setting": {
+		"urlCheck": true,
+		"scopeDataCheck": false,
+		"coverView": true,
+		"es6": true,
+		"postcss": true,
+		"compileHotReLoad": false,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"autoAudits": false,
+		"newFeature": false,
+		"uglifyFileName": false,
+		"uploadWithSourceMap": true,
+		"useIsolateContext": true,
+		"nodeModules": false,
+		"enhance": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"appid": "wx44d5da0f0064db15",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "go",
+					"pathName": "pages/go-mid/Unauthorized/unauthorized",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/team/create/create",
+					"pathName": "pages/team/create/create",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/team/detail/real-time/real-time",
+					"pathName": "pages/team/detail/real-time/real-time",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "GO页面报警记录",
+					"pathName": "pages/go-mid/alarm-log/log",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "报警地图",
+					"pathName": "pages/go-mid/alarm-map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "高德地图",
+					"pathName": "pages/go-mid/gd-map/gd-map",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,39 @@
+<!-- miniprogram/pages/authorization/auth.wxml -->
+<view class="container">
+    <view class="logo">
+        <image src="../../image/logo.png"></image>
+        <view>app</view>
+    </view>
+    <view class="userinfo">
+        <view>请允许获取以下权限</view>
+        <view>以下信息仅用于您登陆app，我们将严格保密绝不外泄，更不会对您发送垃圾信息造成骚扰</view>
+        <view>
+            <view style="{{hasUserInfo?'':'background-color:rgba(85, 195, 54, 1);'}}">1</view>
+            <view>
+                <view class="title_sel" style="{{hasUserInfo?'':'color:rgba(85, 195, 54, 1);'}}">
+                    {{hasUserInfo?'获取公开信息成功':'获取您的公开信息(昵称、头像等)'}}
+                </view>
+                <view>获取您的公开信息，方便您使用app的功能</view>
+            </view>
+        </view>
+        <view>
+            <view style="{{!hasUserInfo?'':'background-color:rgba(85, 195, 54, 1);'}}">2</view>
+            <view>
+                <view class="title_sel" style="{{!hasUserInfo?'':'color:rgba(85, 195, 54, 1);'}}">
+                    授权手机号
+                </view>
+                <view>获取您的公开信息，方便您使用app的功能</view>
+            </view>
+        </view>
+    </view>
+    <view class="usermotto">
+        <!-- <text class="user-motto">{{motto}}</text> -->
+        <button wx:if="{{!hasUserInfo}}" class="user-motto" type='primary' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            授权公开信息
+        </button>
+        <button wx:else="{{hasUserInfo}}" class="user-motto" type='primary' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>
+            授权手机号
+        </button>
+        <button catchtap="leave" class="leave">暂不授权</button>
+    </view>
+</view>

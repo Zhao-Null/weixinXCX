@@ -1,0 +1,118 @@
+/* miniprogram/pages/authorization/auth.wxss */
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 1);
+}
+.logo > image {
+    width: 168rpx;
+    height: 168rpx;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 168rpx;
+    margin: 0 auto 10rpx;
+}
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 680rpx;
+}
+.userinfo > view:nth-child(1) {
+    width: 650rpx;
+    margin: 80rpx 50rpx 16rpx 50rpx;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+}
+.userinfo > view:nth-child(2) {
+    width: 650rpx;
+    margin: 0 50rpx 100rpx 50rpx;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.userinfo > view:nth-child(3) {
+    width: 650rpx;
+    margin: 0 50rpx 100rpx 50rpx;
+    font-size: 12px;
+    display: flex;
+}
+.userinfo > view:nth-child(3) > view:nth-child(1) {
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 50%;
+    background-color: rgba(138, 138, 138, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 52rpx;
+    margin-right: 26rpx;
+}
+.userinfo > view:nth-child(3) > view:nth-child(2) {
+    flex: 1;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+}
+.userinfo > view:nth-child(3) > view:nth-child(2) > view:nth-child(2) {
+    font-size: 12px;
+    margin-top: 14rpx;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.userinfo > view:nth-child(4) {
+    width: 650rpx;
+    margin: 0 50rpx 100rpx 50rpx;
+    font-size: 12px;
+    display: flex;
+}
+.userinfo > view:nth-child(4) > view:nth-child(1) {
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 50%;
+    background-color: rgba(138, 138, 138, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 52rpx;
+    margin-right: 26rpx;
+}
+.userinfo > view:nth-child(4) > view:nth-child(2) {
+    flex: 1;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+}
+.userinfo > view:nth-child(4) > view:nth-child(2) > view:nth-child(2) {
+    font-size: 12px;
+    margin-top: 14rpx;
+    color: rgba(0, 0, 0, 0.6);
+}
+.title_sel {
+    color: rgba(0, 0, 0, 1);
+}
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.usermotto {
+    width: 80%;
+    margin-bottom: 100rpx;
+}
+.leave {
+    background-color: transparent;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 40rpx;
+}
+.leave::after {
+    border: none;
+}

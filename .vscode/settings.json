@@ -1,0 +1,10 @@
+{
+    "git.ignoreLimitWarning": true,
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "search.followSymlinks": false,
+    "files.exclude": {
+        "node_modules": false,
+        "**/*.js": { "when": "$(basename).ts" },
+        "**/*.js.map": true
+    }
+}

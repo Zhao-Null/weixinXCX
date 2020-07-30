@@ -1,0 +1,32 @@
+{
+    "pages": ["pages/my/my", "pages/authorization/auth"],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#5EC76C",
+        "navigationBarTitleText": "app",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#B3B3B3",
+        "selectedColor": "#5EC76C",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "assets/icon/md-school-no-se.png",
+                "selectedIconPath": "assets/icon/md-school-se.png",
+                "text": "my"
+            },
+            {
+                "pagePath": "pages/authorization/auth",
+                "iconPath": "assets/icon/donut-small-no-se.png",
+                "selectedIconPath": "assets/icon/donut-small-se.png",
+                "text": "auth"
+            }
+        ]
+    },
+    "requiredBackgroundModes": ["location"],
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
