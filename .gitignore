@@ -2,3 +2,4 @@
 *.js
 !miniprogram/miniprogram_npm/**/**.js
 project.config.json
+dist
