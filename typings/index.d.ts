@@ -8,6 +8,7 @@ interface IAppOption {
         phone: number;
         authorization: boolean;
         GDKEY: string;
+        TXKEY: string;
     };
     userInfoReadyCallback?: WechatMiniprogram.GetUserInfoSuccessCallback;
 }

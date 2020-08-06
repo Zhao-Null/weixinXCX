@@ -22,5 +22,5 @@
         "typeRoots": ["./typings"]
     },
     "include": ["./**/*.ts"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "importJs./*.js"]
 }

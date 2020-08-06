@@ -1,0 +1,50 @@
+{
+    "pages": [
+        "pages/main/main",
+        "pages/my/my",
+        "pages/dominos/dominos",
+        "pages/authorization/auth",
+        "pages/vote/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#FF5A5A",
+        "navigationBarTitleText": "app",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#2D2D2D",
+        "selectedColor": "#FF8080",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/main/main",
+                "iconPath": "assets/icon/main-no.png",
+                "selectedIconPath": "assets/icon/main.png",
+                "text": "主页"
+            },
+            {
+                "pagePath": "pages/vote/index",
+                "iconPath": "assets/icon/vote-no.png",
+                "selectedIconPath": "assets/icon/vote.png",
+                "text": "例子"
+            },
+            {
+                "pagePath": "pages/dominos/dominos",
+                "iconPath": "assets/icon/dominos-no.png",
+                "selectedIconPath": "assets/icon/dominos.png",
+                "text": "看着"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "assets/icon/me-no.png",
+                "selectedIconPath": "assets/icon/me.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "requiredBackgroundModes": ["location"],
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

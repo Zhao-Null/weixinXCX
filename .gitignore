@@ -1,3 +1,4 @@
 ﻿node_modules
 *.js
 !miniprogram/miniprogram_npm/**/**.js
+project.config.json
