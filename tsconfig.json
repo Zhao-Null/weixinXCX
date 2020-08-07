@@ -19,8 +19,7 @@
         "pretty": true,
         "strictPropertyInitialization": true,
         "lib": ["es2015"],
-        "typeRoots": ["./typings"],
-        "outDir": "dist"
+        "typeRoots": ["./typings"]
     },
     "include": ["./**/*.ts"],
     "exclude": ["node_modules", "importJs./*.js"]
