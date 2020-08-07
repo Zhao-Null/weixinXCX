@@ -10,14 +10,14 @@ import {
     Instruction,
 } from "./interface/my-interface";
 import { foundSml, toZhDigit } from "./util";
-import * as AMapp from "../importjs/amap-wx";
+import { AMapp } from "../importjs/amap-wx/index";
 // 驾车
 export const drivingRoute: DrivingRouteVoid = (
     origin: string,
     destination: string
 ) => {
     const app = getApp<IAppOption>();
-    let myAmapFun = new AMapp.AMapWX({ key: app.globalData.GDKEY });
+    let myAmapFun = new AMapp({ key: app.globalData.GDKEY });
     return new Promise((res, rej) => {
         myAmapFun.getDrivingRoute({
             origin,
@@ -106,7 +106,7 @@ export const WalkingRoute: WalkingRouteVoid = (
     destination: string
 ) => {
     const app = getApp<IAppOption>();
-    let myAmapFun = new AMapp.AMapWX({ key: app.globalData.GDKEY });
+    let myAmapFun = new AMapp({ key: app.globalData.GDKEY });
     return new Promise((res, rej) => {
         myAmapFun.getWalkingRoute({
             origin,
@@ -186,7 +186,7 @@ export const TransitRoute: TransitRouteVoid = (
     destination: string
 ) => {
     const app = getApp<IAppOption>();
-    let myAmapFun = new AMapp.AMapWX({ key: app.globalData.GDKEY });
+    let myAmapFun = new AMapp({ key: app.globalData.GDKEY });
     return new Promise((res, rej) => {
         myAmapFun.getTransitRoute({
             origin,
@@ -229,7 +229,7 @@ export const RidingRoute: RidingRouteVoid = (
     destination: string
 ) => {
     const app = getApp<IAppOption>();
-    let myAmapFun = new AMapp.AMapWX({ key: app.globalData.GDKEY });
+    let myAmapFun = new AMapp({ key: app.globalData.GDKEY });
     return new Promise((res, rej) => {
         myAmapFun.getRidingRoute({
             origin,
@@ -310,7 +310,7 @@ export const RidingRoute: RidingRouteVoid = (
 // 获取地址描述信息
 export const regeo: Regeo = (location: string) => {
     const app = getApp<IAppOption>();
-    let myAmapFun = new AMapp.AMapWX({ key: app.globalData.GDKEY });
+    let myAmapFun = new AMapp({ key: app.globalData.GDKEY });
     return new Promise((res, rej) => {
         myAmapFun.getRegeo({
             location: location,
