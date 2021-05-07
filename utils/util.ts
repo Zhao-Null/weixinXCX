@@ -62,3 +62,54 @@ export const toZhDigit = (num: number | string, isadd: boolean = true) => {
     }
     return str;
 };
+
+/**
+ * 取出可选参数
+ */
+export type NullableKeys<T> = {
+  [K in keyof T]-?: undefined extends T[K] ? K : never;
+}[keyof T];
+
+/**
+ * 返回函数首个参数类型
+ */
+export type Parameter<T extends (...args: any) => any> = Parameters<T>[0];
+
+export type wxBackType = "success" | "complete" | "fail";
+/**
+ * 是否含有 success
+ */
+export type OptionalParameter<T extends (...args: any) => any> = undefined extends Parameter<T> ? T : NullableKeys<
+  Parameter<T>
+> &
+  "success" extends never
+  ? never
+  : T;
+
+/**
+ * 使用promise的方式调用原本wx接口
+ * 必须含有options参数的接口  同时会丢弃如wx.downloadFile返回的DownloadTask
+ * @returns 返回值为原微信api的success函数参数
+ * @param fn 微信接口 若推断为never 则此微信接口不能使用该方法
+ * @param args 函数参数
+ * @example 1. WxAsync(wx.xxx,{options})
+ * @example 2. WxAsync(wx.saveFile,{}).then(res)
+ */
+export const WxAsync = <T extends (args: any) => any, U extends Parameter<T>>(
+  fn: OptionalParameter<T>,
+  args: Omit<U, wxBackType> 
+): Promise<Parameter<Parameter<T>["success"]>> => {
+  return new Promise((resolve, reject) => {
+    let cb = [{ success: 1 }, { complete: 2 }, { fail: 3 }].map((item) => {
+      let key = Object.keys(item)[0] as wxBackType;
+      return {
+        [key]: (res: any) => {
+          key === "success" ? resolve(res) : reject(res);
+        },
+      };
+    });
+    args = Object.assign(args || {}, ...cb);
+    fn(args);
+  });
+};
+
