@@ -73,13 +73,13 @@ export type NullableKeys<T> = {
 /**
  * 返回函数首个参数类型
  */
-export type Parameter<T extends (...args: any) => any> = Parameters<T>[0];
+export type Parameter<T extends (...args: any) => any> = Required<Parameters<T>>[0];
 
 export type wxBackType = "success" | "complete" | "fail";
 /**
  * 是否含有 success
  */
-export type OptionalParameter<T extends (...args: any) => any> = undefined extends Parameter<T> ? T : NullableKeys<
+export type OptionalParameter<T extends (...args: any) => any> = NullableKeys<
   Parameter<T>
 > &
   "success" extends never
